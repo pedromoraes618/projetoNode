@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest test",
     "start": "node index.js"
   },
   "author": "",
@@ -12,5 +12,8 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "inquirer": "^8.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
   }
 }

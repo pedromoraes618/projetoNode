@@ -33,7 +33,11 @@ function operation() {
         }
     }).catch(err => console.log(err))
 }
-
+// Certifique-se de exportar a função operation
+module.exports = {
+    operation,
+    // Outras funções exportadas, se houver
+};
 //create account
 function createAccount() {
     console.log(chalk.bgGreen.black('Parabéns por escolher o nosso banco!'))
@@ -186,15 +190,6 @@ function rmAmount(accountName, amount) {
         }
     )
     console.log(chalk.green('foi sacado o valor de R$ ' + amount + ' da sua conta'))
-}
-
-function getAccount(accountName) {
-    const accountJSON = fs.readFileSync('accounts/' + accountName + '.json',
-        {
-            encoding: 'utf8',
-            flag: 'r',
-        })
-    return JSON.parse(accountJSON)
 }
 
 
